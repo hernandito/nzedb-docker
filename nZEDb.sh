@@ -18,6 +18,6 @@ if [[ ! -e /var/www/nZEDb/www/config.php ]]; then
 else
 
   cd /var/www/nZEDb/misc/update/nix/tmux
-  exec php start.php
+#  exec php start.php
 
 fi
