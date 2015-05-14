@@ -47,13 +47,13 @@ RUN \
   apt-get install -y unrar-free lame mediainfo p7zip-full
 
 # Install MariaDB.
-#RUN \
-#  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0xcbcb082a1bb943db && \
-#  apt-get update && \
-#  echo "deb http://mirror2.hs-esslingen.de/mariadb/repo/10.0/ubuntu trusty main" > /etc/apt/sources.list.d/mariadb.list && \
-#  apt-get update && \
-#  apt-get install -y mariadb-server && \
-#  sed -i 's/^\(bind-address\s.*\)/# \1/' /etc/mysql/my.cnf
+RUN \
+  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0xcbcb082a1bb943db && \
+  apt-get update && \
+  echo "deb http://mirror2.hs-esslingen.de/mariadb/repo/10.0/ubuntu trusty main" > /etc/apt/sources.list.d/mariadb.list && \
+  apt-get update && \
+  apt-get install -y mariadb-server && \
+  sed -i 's/^\(bind-address\s.*\)/# \1/' /etc/mysql/my.cnf
 
 # Install Python MySQL modules.
 RUN \
