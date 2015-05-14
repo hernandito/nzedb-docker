@@ -136,12 +136,9 @@ RUN apt-get update
 RUN apt-get install -y znc znc-dbg znc-dev znc-perl znc-python znc-tcl
 RUN adduser --disabled-password --gecos "" znc
 
-
 # First time setup, znc must be configured while logged in as user 'znc'. 
 # TO configure, follow this tutorial: http://forums.nzedb.com/index.php?topic=2000.0
 # You will need to un-comment lines in /etc/myinit.d/nZEDb.sh
-
-
 
 # Define mountable directories
 VOLUME ["/etc/nginx/sites-enabled", "/var/log", "/var/www/nZEDb", "/etc/my_init.d", "/var/lib/mysql"]
