@@ -133,7 +133,7 @@ RUN apt-get update
 RUN apt-get install -y python-software-properties
 RUN add-apt-repository ppa:teward/znc
 RUN apt-get update
-RUN apt-get install znc znc-dbg znc-dev znc-perl znc-python znc-tcl
+RUN apt-get install -y znc znc-dbg znc-dev znc-perl znc-python znc-tcl
 RUN adduser --disabled-password --gecos "" znc
 
 
