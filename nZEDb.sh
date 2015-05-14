@@ -17,7 +17,17 @@ if [[ ! -e /var/www/nZEDb/www/config.php ]]; then
 
 else
 
+# Un-comment lines below after configuring znc for the first time using
+# my tutorial here: http://forums.nzedb.com/index.php?topic=2000.0
+
+#  su znc
+#  sleep 4
+#  znc
+#  sleep 5
+#  exec su -root
+#  sleep 3
   cd /var/www/nZEDb/misc/update/nix/tmux
+  sleep 2
 #  exec php start.php
 
 fi
