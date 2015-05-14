@@ -4,7 +4,7 @@
 #
 
 # Use baseimage-docker
-FROM phusion/baseimage:0.9.11
+FROM phusion/baseimage:0.9.15
 
 # Set maintainer
 MAINTAINER razorgirl <https://github.com/razorgirl>
@@ -144,7 +144,7 @@ RUN adduser --disabled-password --gecos "" znc
 
 
 # Define mountable directories
-VOLUME ["/etc/nginx/sites-enabled", "/var/log", "/var/www/nZEDb", "/var/lib/mysql"]
+VOLUME ["/etc/nginx/sites-enabled", "/var/log", "/var/www/nZEDb", "/etc/my_init.d", "/var/lib/mysql"]
 
 # Expose ports
 EXPOSE 8810
